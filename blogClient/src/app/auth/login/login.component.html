@@ -1,0 +1,34 @@
+<blog-popup *ngIf="modelBoolean" [modelbox]="modelbox" (response)="receiveMessage($event)"></blog-popup>
+<div class="page-35">
+  
+  <div class="page-header">
+    <p>Now lets </p>
+    <p class="page-title">Login</p>
+  </div>
+</div>
+<div class="page-65">
+  <div class="box">
+    <form (ngSubmit)="formSubmit()" #create="ngForm" id="create">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" class="form-control" name="email" required [(ngModel)]="user.email" #email="ngModel" 
+        [ngClass]="{'errors': email.invalid && (email.dirty || email.touched)}">
+        <div class="validators" *ngIf="email.invalid && (email.dirty || email.touched)">
+          <div class="innerValidators" *ngIf="email.errors.required" >Email Required</div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" name="password" required [(ngModel)]="user.password" #password="ngModel" 
+        [ngClass]="{'errors': password.invalid && (password.dirty || password.touched)}">
+        <div class="validators" *ngIf="password.invalid && (password.dirty || password.touched)">
+            <div class="innerValidators" *ngIf="password.errors.required" >Password Required</div>
+        </div>
+      </div>
+     
+      
+      <button type="submit" class="btn btn-success" [disabled]="!create.form.valid" >Submit</button>
+    </form>
+  </div>
+</div>

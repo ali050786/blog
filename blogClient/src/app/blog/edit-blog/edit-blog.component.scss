@@ -1,0 +1,40 @@
+.form-group {
+    width: 100%;     
+    box-sizing: border-box;
+     /* Opera/IE 8+ */
+ }
+ 
+ 
+ label{
+     width: 100%;
+     color:#333;
+     display: block;
+     margin-bottom: 10px;
+ }
+ 
+ input, textarea{
+     padding: 20px;
+     border: none;
+     position: relative;
+     width: 100%;
+     margin-bottom:10px;
+     background:#f0f0eb;
+     box-sizing: border-box;
+     font-family: 'Roboto', sans-serif;
+ }
+ 
+ button:disabled{
+    opacity: 0.5;
+}
+ 
+ 
+ 
+ button{
+     margin: 20px 0px;
+     background: #fe5000;
+     color:#fff;
+     font-size: 18px;
+     padding: 10px 20px;
+     border:none;
+     text-transform: uppercase;
+ }

@@ -1,0 +1,11 @@
+<div class="page-35">
+<div class="page-header">
+  <p>Blog</p>
+  <p class="page-title">The<br> latest</p>
+</div>
+</div>
+<div class="page-65">
+<a class="blogbox" *ngFor="let post of posts" routerLink="{{post.id}}">
+  <h1>{{post.title}}</h1>
+</a>
+</div>

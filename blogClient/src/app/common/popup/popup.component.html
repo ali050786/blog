@@ -1,0 +1,6 @@
+<div class="boxmodel">
+  <p>{{modelbox.message}}</p>
+  <span *ngIf="modelbox.buttons.first" (click)="calltoAction(modelbox.buttons.first)">{{modelbox.buttons.first}}</span>
+  <span *ngIf="modelbox.buttons.second" (click)="calltoAction(modelbox.buttons.second)">{{modelbox.buttons.second}}</span>
+  <span *ngIf="modelbox.buttons.third" (click)="calltoAction(modelbox.buttons.third)">{{modelbox.buttons.third}}</span>
+</div>

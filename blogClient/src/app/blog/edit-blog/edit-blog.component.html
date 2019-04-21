@@ -1,0 +1,28 @@
+<blog-popup *ngIf="modelBoolean" [modelbox]="modelbox" (response)="receiveMessage($event)"></blog-popup>
+<div class="page-35">
+    <div class="page-header"  *ngIf="post">
+      <p>Revamp</p>
+      <p class="page-title">a blog</p>
+    </div>
+  </div>
+  <div class="page-65">
+    <div class="box">
+      <form (ngSubmit)="formSubmit()" #edit="ngForm" *ngIf="post">
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input type="text" class="form-control" name="title" required [(ngModel)]="post.title">
+        </div>
+  
+        <div class="form-group">
+          <label for="body">Body</label>
+          <textarea class="form-control" name="body" rows="10" required [(ngModel)]="post.body"></textarea>
+        </div>
+  
+        <div class="form-group">
+          <label for="image">imageLink</label>
+          <input type="text" class="form-control" name="image" required [(ngModel)]="post.image">
+        </div>
+        <button type="submit" class="btn btn-success" [disabled]="!edit.form.dirty">Submit</button>
+      </form>
+    </div>
+  </div>

@@ -1,0 +1,17 @@
+<div class="page-35">
+<div class="page-header" *ngIf="post">
+  <p>{{post.time | date:'dd LLLL'}} <span (click)="delete()">Delete</span> <span routerLink="edit">Edit</span></p>
+  <p class="page-title">{{post.title}}</p>
+  </div>
+</div>
+<div class="page-65">
+    <div *ngIf="post" class="post box">
+        <div class="imgcontainer">
+        <img src="{{post.image}}">
+        </div>
+        <h1>{{post.title}}</h1>
+        <p class="date">{{post.time | date:'dd LLLL, yyyy'}}</p>
+        <p>{{post.body}}</p>
+      </div>
+</div>
+<blog-popup *ngIf="modelBoolean" [modelbox]="modelbox" (response)="receiveMessage($event)"></blog-popup>

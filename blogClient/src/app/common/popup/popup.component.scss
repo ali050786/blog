@@ -1,0 +1,29 @@
+.boxmodel{
+    background: #fe5000;
+    position: fixed;
+    top:100px;
+    display: table;
+    
+    z-index: 1000;
+    padding: 30px 80px;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 18px;
+    right:100px;
+    
+}
+
+.boxmodel *{
+    margin: 0px;
+    padding: 0px;
+}
+
+.boxmodel span{
+    background: #fff;
+    color: #fe5000;
+    margin-top:10px;
+    padding: 7px 10px;
+    display: inline-block;
+    margin-right: 10px;
+    cursor: pointer;
+}
